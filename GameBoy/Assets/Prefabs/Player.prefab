@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 536073306}
   - component: {fileID: 536073305}
   - component: {fileID: 661324294}
-  m_Layer: 0
+  - component: {fileID: 635870185}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1509548075
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f45da71a524394296baf12434c7371fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -121,7 +122,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &536073305
 CapsuleCollider2D:
@@ -132,12 +133,12 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1323809986133493451}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 31c2ef6c2dfdd4d77a79a3b45ed712b5, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02, y: -0.16}
-  m_Size: {x: 0.5, y: 0.64}
+  m_Offset: {x: -0.010457754, y: -0.1}
+  m_Size: {x: 0.728611, y: 0.0001}
   m_Direction: 0
 --- !u!114 &661324294
 MonoBehaviour:
@@ -154,3 +155,30 @@ MonoBehaviour:
   walkSpeed: 5
   jumpSpeed: 10
   climbSpeed: 5
+  deathKick: {x: 7, y: 7}
+--- !u!61 &635870185
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323809986133493451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010409117, y: -0.46457446}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96, y: 0.96}
+    newSize: {x: 0.96, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.41388845, y: 0.007407427}
+  m_EdgeRadius: 0
