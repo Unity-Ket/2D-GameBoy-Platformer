@@ -17,22 +17,19 @@ public class enemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemyPatrol();
+    }
+
+    void enemyPatrol()
+    {
         if (IsFacingRight())
         {
             enemyBody.velocity = new Vector2(moveSpeed, 0f);
-        }
-        else
+        }else
         {
             enemyBody.velocity = new Vector2(-moveSpeed, 0f);
         }
-
-        //enemyPatrol();
     }
-
-    //void enemyPatrol()
-    //{
-
-    //}
 
     bool IsFacingRight()
     {
