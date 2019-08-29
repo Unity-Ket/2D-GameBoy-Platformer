@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class player : MonoBehaviour
 {
     [SerializeField] float walkSpeed, jumpSpeed, climbSpeed;
-    [SerializeField] Vector2 deathKick = new Vector2(7,7);
+    [SerializeField] Vector2 deathKick = new Vector2(5,5);
 
     bool playerAlive = true;
     Rigidbody2D playerBody;

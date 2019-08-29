@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] int playerlives = 3;
+    [SerializeField] int playerlives = 3, Score =0;
     [SerializeField] float LoadDelay = 3;
+    [SerializeField] Text LiveText, ScoreText;
 
     private void Awake()
     {
@@ -20,6 +22,18 @@ public class GameSession : MonoBehaviour
         else {
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    void Start()
+    {
+        LiveText.text = playerlives.ToString();
+        ScoreText.text = Score.ToString(); 
+    }
+
+    public void addPoint(int pointsToAdd)
+    {
+        Score += pointsToAdd;
+        ScoreText.text = Score.ToString();
     }
 
     public void playerDeath()
@@ -37,7 +51,8 @@ public class GameSession : MonoBehaviour
     {
         playerlives--;
         StartCoroutine(ReloadLevel());
-        
+        LiveText.text = playerlives.ToString();
+
     }
 
     IEnumerator ReloadLevel()
